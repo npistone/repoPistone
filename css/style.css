@@ -1,0 +1,439 @@
+body{
+    background-color: #2E9992;
+}
+
+.grid-contenedor{
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr;
+grid-template-rows: auto auto auto auto auto auto 70px;
+
+background-color: #2E9992;
+}
+
+body{
+    padding: 5px 0;
+}
+/* nav configuracion */
+.grid-nav{
+    
+    display: flex;
+    background-color: #000004;   
+    position: sticky;
+    border: 3px;
+    border-color: white;
+    border-style: solid;
+    overflow: visible;
+    opacity: 0.7;
+    border-radius: 15px;
+    width: 100%;
+    padding-left: 0;
+    font-size: small;
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    float: right;
+    margin: auto;
+    margin-left: 5px;
+    padding: 0%;
+}
+
+nav ul li {
+    display: flex;
+      
+    text-decoration: none;
+    padding: 0 2px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.grid-nav img{
+
+    height: 100%;
+    width: 20%;
+}
+
+/* Quienes somos configuraicon */
+.grid-descriptivo__titu{
+    margin: 15px 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Otomanopee One', sans-serif;
+
+}
+.descriptivo__imagenPrincipal {
+    
+    width: 90%;
+    padding: 10px 5px;
+    text-align: center;
+    margin:0;
+}
+
+.descriptivo__texto {    
+    
+    margin:0;
+    padding: 20px 5px;
+    width: 90%;
+    height: 200px;    
+    font-family: 'Oregano', cursive;
+    font-size:x-large;
+    text-align: center;
+    border: 4px inset lightgrey;
+ }
+.grid-descriptivo{
+    display: flex;
+    flex-direction: column;   
+    background-color: #2E9992;    
+    padding-top: 50px;
+    align-items: center;
+    align-content: center;
+    
+    
+}
+/* Products */
+
+.grid-productos__titu{
+    margin:  0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.grid-productos{
+    
+    display: flex;
+    flex-direction: column;    
+    background-color: #2E9992;
+}
+
+.productos__cards{    
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Viedo configuraicon */
+.grid-frame{
+    
+    display: flex;  
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    background-color: #2E9992;
+    padding: 10px 10px;
+    margin: 0;
+    
+}
+/* Foooter configuracion */
+.grid-pie{
+    
+    display: flex;
+    background-color: #000004;   
+    border: 3px;
+    border-style: solid;
+    overflow: visible;
+    opacity: 0.7;
+    width: auto;
+    height: 70px;
+    justify-content: space-around;
+    padding: 10px ;
+}
+.pie{
+    
+    width: 100%;
+    height: auto;
+
+}
+.pie__icons{
+    
+    display: inline;
+    height: 70px;
+    width: 60px;
+    padding: 10px 10px;
+}
+
+/*--------------- Desarrollo configuracion -----------*/
+.grid-desarrollo1{
+    display: flex;
+    flex-direction: column;   
+    background-color: #2E9992;    
+    padding-top: 50px;
+    align-items: center;
+    align-content: center;
+
+}
+.grid-desarrollo2{
+    display: flex;
+    flex-direction: column;   
+    background-color: #2E9992;    
+    padding-top: 50px;
+    align-items: center;
+    align-content: center;
+
+}
+.grid-desarrollo3{
+    display: flex;
+    flex-direction: column;   
+    background-color: #2E9992;    
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.desarrollo__imagenPrincipal {
+    height: auto;
+    width: 90%;
+    padding: 10px 5px;
+    text-align: center;
+    margin:0;
+}
+
+.desarrollo__texto {    
+    
+    margin:0;
+    padding: 20px 5px;
+    width: 90%;
+    height: 200px;    
+    font-family: 'Oregano', cursive;
+    font-size:x-large;
+    text-align: center;
+    border: 4px inset rgba(189, 153, 153, 0.692);
+ }
+
+/* ------------- Imagenes--------------*/
+.img{
+    border-radius: 6px;
+    box-shadow: 5px 6px 20px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 6px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 6px 20px 0px rgba(0,0,0,0.75);
+}
+
+
+
+
+/* Configuracion media queries */
+
+@media screen and (min-width: 768px) {
+    .grid-contenedor {
+        max-width: 100%;        
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        
+    }
+    .grid-nav{
+        grid-column: 1/4;
+        grid-row: 1/2;
+        height: 60px;
+       }
+   
+    .grid-nav img{
+        border-radius: 5px;
+        height: 60px;
+        width: 150px;
+    }
+    .grid-descriptivo__titu{
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    .grid-descriptivo{
+        grid-column: 1/4;
+        grid-row: 3/4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+    }
+        
+    .descriptivo__imagenPrincipal {
+        display: inline;
+        flex-direction: row;
+        width: 50%;
+    }
+    .descriptivo__texto{
+        display: inline;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .grid-productos__titu{
+        grid-column: 1/4;
+        grid-row: 4/5;
+    }
+    .grid-productos{
+        grid-column: 1/4;
+        grid-row: 5/6;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .productos__cards{
+    
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        
+        }
+    .grid-frame{
+        grid-column: 1/4;
+        grid-row: 6/7;
+    }
+
+    .grid-pie{
+        grid-column: 1/4;
+        grid-row: 7/8;
+        height: 70px;
+    }
+
+    
+
+}
+/*-----------Configuracion de Contacto------------------*/
+.grid-contacto{
+
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr;
+grid-template-rows: 80px auto auto 60px;
+background-color: #2E9992;
+
+}
+
+.grid__contacto-titulo{
+    margin: 15px 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.grid__contacto-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #477774;
+}
+.formulario__input{
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Otomanopee One', sans-serif;
+    padding: 10px 0;
+}
+/*---------Media queries Contacto -------------*/
+@media screen and (min-width: 768px){
+
+    .grid-contacto {
+        max-width: 100%;        
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: auto;
+        background-color: #2E9992;
+        
+    }
+    .grid__contacto-titulo{
+
+        grid-column: 1/4;
+        grid-row: 2/3;
+
+    }
+    .grid__contacto-formulario{
+
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+}
+
+
+/*-------- Configuracion para Login -------*/
+
+
+.grid-login{   
+
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        background-color: #2E9992;       
+        
+}
+
+.grid-login__formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: #477774;
+    margin: 100px 0;
+    border-radius: 10px;
+}
+
+.formulario__input__us{
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Otomanopee One', sans-serif;
+    padding-top: 20px;
+    margin: 20px 0;
+}
+.formulario__input__pas{
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Otomanopee One', sans-serif;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+.grid-login__pie{
+    
+    display: flex;
+    background-color: #000004;   
+    border: 3px;
+    border-style: solid;
+    overflow: visible;
+    opacity: 0.7;
+    width: auto;
+    height: 70px;
+    justify-content: space-around;
+    padding: 10px ;
+}
+
+@media screen and (min-width: 768px){
+
+    .grid-login {
+        max-width: 100%;        
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 4fr 4fr 1fr ;
+        background-color: #2E9992;
+        
+    }
+    
+    .grid__login-formulario{
+
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
+    .grid-login__pie{
+        grid-column: 1/4;
+        grid-row: 5/6;
+
+    }
+}
+
+
